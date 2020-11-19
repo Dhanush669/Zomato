@@ -111,7 +111,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="155dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -406,8 +406,6 @@
     </ScrollView>
     <androidx.cardview.widget.CardView
         app:layout_constraintBottom_toBottomOf="@+id/summa"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <LinearLayout
@@ -416,6 +414,8 @@
             android:orientation="horizontal"
             >
             <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
                 android:layout_width="31dp"
                 android:layout_height="39dp"
                 android:src="@drawable/ic_shoppingbag"
@@ -426,6 +426,7 @@
                 android:layout_height="20dp">
             </View>
             <ImageView
+                android:layout_marginTop="10dp"
                 android:layout_width="24dp"
                 android:layout_height="34dp"
                 android:src="@drawable/ic_footstepssilhouettevariant"
@@ -436,6 +437,7 @@
                 android:layout_height="20dp">
             </View>
             <ImageView
+
                 android:layout_width="41dp"
                 android:layout_height="53dp"
                 android:src="@drawable/ic_crown"
@@ -446,6 +448,7 @@
                 android:layout_height="20dp">
             </View>
             <ImageView
+                android:layout_marginTop="10dp"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:src="@drawable/ic_direction"
@@ -456,8 +459,7 @@
                 android:layout_height="20dp">
             </View>
             <ImageView
-                android:layout_marginBottom="10"
-                android:layout_gravity="right"
+                android:layout_marginTop="10dp"
                 android:layout_width="37dp"
                 android:layout_height="37dp"
                 android:src="@drawable/ic_account"
