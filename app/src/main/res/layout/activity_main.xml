@@ -73,7 +73,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="95dp"
+        android:layout_marginTop="75dp"
         android:layout_marginEnd="20dp"
         app:cardBackgroundColor="#FFFFFF"
         app:cardElevation="10dp"
@@ -110,7 +110,7 @@
         android:id="@+id/summa"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="155dp"
+        android:layout_marginTop="135dp"
         android:layout_marginBottom="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -193,47 +193,16 @@
                 android:textColor="#515151"
                 >
             </TextView>
-            <HorizontalScrollView
+            <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                >
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginStart="15dp"
+                android:id="@+id/offers"
+                android:layout_marginStart="5dp"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginEnd="15dp"
                 android:layout_marginTop="20dp"
                 >
-                <ImageView
-                    android:layout_width="111dp"
-                    android:layout_height="111dp"
-                    android:src="@drawable/alloffers"
-                    >
-                </ImageView>
-                <View
-                    android:layout_width="22dp"
-                    android:layout_height="20dp">
-                </View>
-                <ImageView
-                    android:layout_width="111dp"
-                    android:layout_height="111dp"
-                    android:src="@drawable/pocket"
-                    >
-                </ImageView>
-                <View
-                    android:layout_width="22dp"
-                    android:layout_height="20dp">
-                </View>
-                <ImageView
-                    android:layout_width="111dp"
-                    android:layout_height="111dp"
-                    android:src="@drawable/nonveg"
-                    >
-                </ImageView>
-            </LinearLayout>
-            </HorizontalScrollView>
+            </androidx.recyclerview.widget.RecyclerView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -252,22 +221,24 @@
                 >
             </TextView>
             <androidx.recyclerview.widget.RecyclerView
-                android:layout_marginStart="15dp"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginEnd="15dp"
                 android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/ordering"
                 >
             </androidx.recyclerview.widget.RecyclerView>
+
             <androidx.recyclerview.widget.RecyclerView
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:id="@+id/ordering1"
-                >
+                android:layout_marginStart="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp">
             </androidx.recyclerview.widget.RecyclerView>
             <androidx.cardview.widget.CardView
                 android:layout_marginTop="20dp"
@@ -301,86 +272,26 @@
                 android:textColor="#000000"
                 android:textSize="13sp">
             </TextView>
-            <HorizontalScrollView
+            <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/offers1"
+                android:layout_marginStart="5dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="20dp"
                 >
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginTop="20dp"
-                    >
-                    <ImageView
-                        android:layout_width="121dp"
-                        android:layout_height="101dp"
-                        android:src="@drawable/pureveg"
-                        >
-                    </ImageView>
-                    <View
-                        android:layout_width="22dp"
-                        android:layout_height="20dp">
-                    </View>
-                    <ImageView
-                        android:layout_width="121dp"
-                        android:layout_height="101dp"
-                        android:src="@drawable/trending"
-                        >
-                    </ImageView>
-                    <View
-                        android:layout_width="22dp"
-                        android:layout_height="20dp">
-                    </View>
-                    <ImageView
-                        android:layout_width="121dp"
-                        android:layout_height="101dp"
-                        android:src="@drawable/hygiene"
-                        >
-                    </ImageView>
-                </LinearLayout>
-            </HorizontalScrollView>
-            <HorizontalScrollView
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/offers2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                >
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginTop="20dp"
-                    >
-                    <ImageView
-                        android:layout_width="121dp"
-                        android:layout_height="101dp"
-                        android:src="@drawable/meal"
-                        >
-                    </ImageView>
-                    <View
-                        android:layout_width="22dp"
-                        android:layout_height="20dp">
-                    </View>
-                    <ImageView
-                        android:layout_width="121dp"
-                        android:layout_height="101dp"
-                        android:src="@drawable/offers"
-                        >
-                    </ImageView>
-                    <View
-                        android:layout_width="22dp"
-                        android:layout_height="20dp">
-                    </View>
-                    <ImageView
-                        android:layout_width="121dp"
-                        android:layout_height="101dp"
-                        android:src="@drawable/zomotapro"
-                        >
-                    </ImageView>
-                </LinearLayout>
-            </HorizontalScrollView>
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp">
+            </androidx.recyclerview.widget.RecyclerView>
             <TextView
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
