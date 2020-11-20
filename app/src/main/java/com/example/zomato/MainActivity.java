@@ -10,8 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    RecyclerView recyclerView,recyclerView1,off,off1,off2;
+    RecyclerView recyclerView,recyclerView1,off,off1,off2,resnearyou;
     List<Datagetset> res1,res2;
+    List<Datagetsetshop> shops;
     List<Integer> offers,offers1,offers2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView1=findViewById(R.id.ordering1);
         off=findViewById(R.id.offers);
         off1=findViewById(R.id.offers1);
+        resnearyou=findViewById(R.id.resnearyou);
         off2=findViewById(R.id.offers2);
         res1=new ArrayList<>();
         res2=new ArrayList<>();
@@ -46,13 +48,23 @@ public class MainActivity extends AppCompatActivity {
         offers1=new ArrayList<>();
         offers1.add(R.drawable.pureveg);
         offers1.add(R.drawable.trending);
-        offers1.add(R.drawable.hygiene);
-        setOfferView(offers1,off1);
+        offers1.add(R.drawable.hygine);
+        SetQuickLink(offers1,off1);
         offers2=new ArrayList<>();
         offers2.add(R.drawable.meal);
         offers2.add(R.drawable.offers);
-        offers2.add(R.drawable.zomotapro);
-        setOfferView(offers2,off2);
+        offers2.add(R.drawable.zomatopro);
+        SetQuickLink(offers2,off2);
+        shops=new ArrayList<>();
+        Datagetsetshop dgss=new Datagetsetshop("Behourz Biriyani","Biriyani, North India, Mughlai","Closes in 45 Mins","Rs.300 For One",R.drawable.biriyani);
+        Datagetsetshop dgss1=new Datagetsetshop("Behourz Biriyani","Biriyani, North India, Mughlai","Closes in 45 Mins","Rs.300 For One",R.drawable.biriyani);
+        shops.add(dgss);
+        shops.add(dgss1);
+        RecyclerAdaptershop rass=new RecyclerAdaptershop(shops,this);
+        resnearyou.setAdapter(rass);
+        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(MainActivity.this,LinearLayoutManager.VERTICAL,false);
+        resnearyou.setLayoutManager(linearLayoutManager);
+
     }
 
     public void setRecyclerView(List<Datagetset> list,RecyclerView rv){
@@ -63,6 +75,12 @@ public class MainActivity extends AppCompatActivity {
     }
     public void setOfferView(List<Integer> list,RecyclerView rv){
         RecyclerAdapter1 ra=new RecyclerAdapter1(list,MainActivity.this);
+        rv.setAdapter(ra);
+        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(MainActivity.this,LinearLayoutManager.HORIZONTAL,false);
+        rv.setLayoutManager(linearLayoutManager);
+    }
+    public void SetQuickLink(List<Integer> list,RecyclerView rv){
+        RecyclerAdapterql ra=new RecyclerAdapterql(list,MainActivity.this);
         rv.setAdapter(ra);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(MainActivity.this,LinearLayoutManager.HORIZONTAL,false);
         rv.setLayoutManager(linearLayoutManager);

@@ -2,20 +2,77 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="20dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="195dp"
+        android:layout_height="wrap_content"
         app:cardElevation="15dp"
         >
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="125dp"
             android:id="@+id/near"
-            android:padding="5dp"
+            android:paddingEnd="5dp"
+            android:paddingTop="5dp"
             >
         </ImageView>
-        
+            <LinearLayout
+                android:layout_marginTop="126dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+        <TextView
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="#000000"
+            android:fontFamily="@font/roboto_bold"
+            android:id="@+id/shopname"
+            >
+        </TextView>
+            <TextView
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="9sp"
+                android:textColor="#000000"
+                android:fontFamily="@font/roboto"
+                android:id="@+id/shoploc"
+                >
+            </TextView>
+            <TextView
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:textColor="#FF0000"
+                android:fontFamily="@font/roboto_bold"
+                android:id="@+id/shoptime"
+                android:layout_marginBottom="5dp"
+                >
+            </TextView>
+            </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="11sp"
+            android:fontFamily="@font/roboto"
+            android:layout_gravity="right"
+            android:layout_marginTop="150dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/rate"
+            >
+        </TextView>
     </androidx.cardview.widget.CardView>
 
 </LinearLayout>
